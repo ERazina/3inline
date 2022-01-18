@@ -12,23 +12,23 @@
 <body>
     <div class="screen">
         <h1>Three in line</h1>
-        <a href="#" id="start" class="start" onClick={startGame()}>Start game</a>
+        <a href="#" id="start" class="start">Start game</a>
     </div>
     <div class="screen">
         <h1>Choose time</h1>
         <ul class="time-list" id="time-list">
             <li>
-                <button class="time-btn" data-time="60" onClick={chooseTime(60)}>
+                <button class="time-btn" data-time="60" onClick={startGame(60)}>
                     1 minute
                 </button>
             </li>
             <li>
-                <button class="time-btn" data-time="300" onClick={chooseTime(300)}>
+                <button class="time-btn" data-time="300" onClick={startGame(300)}>
                     5 minutes
                 </button>
             </li>
             <li>
-                <button class="time-btn" data-time="600" onClick={chooseTime(600)}>
+                <button class="time-btn" data-time="600" onClick={startGame(600)}>
                     10 minutes
                 </button>
             </li>

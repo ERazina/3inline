@@ -9,9 +9,17 @@ const screens = document.querySelectorAll('.screen');
 const timeElement = document.querySelector('#time');
 let timeLast = 0;
 
-
-const startGame = () => {
+buttonStart.addEventListener('click', (e) => {
+    e.preventDefault();
     screens[0].classList.add('up');
+});
+
+const startGame = (time) => {
+    screens[0].classList.add('up');
+
+    console.log(time);
+    chooseTime();
+    setTime(time);
     // check if app is empty
     if(app.children.length === 0){
     // draw board
@@ -58,9 +66,6 @@ function drowCubes (board) {
     board.appendChild(cube);
 }
 
-const find3inline = () => {
-
-}
 
 function decreeseTime () {
     let current = timeLast;
@@ -77,7 +82,7 @@ function decreeseTime () {
 }
 
 function setTime(value) {
-    timeElement.innerHTML = `00 : ${value}`
+    timeElement.innerHTML = `${value} seconds`
 }
 
 
