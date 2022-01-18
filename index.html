@@ -10,7 +10,35 @@
 </head>
 
 <body>
-    <div id="app">
+    <div class="screen">
+        <h1>Three in line</h1>
+        <a href="#" id="start" class="start" onClick={startGame()}>Start game</a>
+    </div>
+    <div class="screen">
+        <h1>Choose time</h1>
+        <ul class="time-list" id="time-list">
+            <li>
+                <button class="time-btn" data-time="60" onClick={chooseTime(60)}>
+                    1 minute
+                </button>
+            </li>
+            <li>
+                <button class="time-btn" data-time="300" onClick={chooseTime(300)}>
+                    5 minutes
+                </button>
+            </li>
+            <li>
+                <button class="time-btn" data-time="600" onClick={chooseTime(600)}>
+                    10 minutes
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="screen">
+        <h2 id="score_title">Score is: <span id="score">0</span></h2>
+        <div class="">Time-left: <span id="time">0</span></div>
+        <div id="app">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
